@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Create Your Ad</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <link rel="stylesheet"  href="style.css" >
+    <link rel="icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Dosis|Montserrat" rel="stylesheet">
+  </head>
+  <body onload="check_login()">
+    <header>
+      <!-- AppBar -->
+      <div class="app-header">
+        <div class="inner">
+          <i class="fa fa-bars" onclick="nav('open')"></i>
+          <h3><a href="index.html">OLX Pakistan</a></h3>
+        </div>
+        <a href="newad.html" title="Create new ad"><i class='fa fa-plus'></i></a>
+      </div>
+
+      <!-- Side Navigation -->
+      <nav id='nav'>
+        <i class="fa fa-arrow-left" onclick="nav('close')"></i>
+        <div class="account-info">
+          <h3>OLX Pakistan</h3>
+          <p>Created by: Muhammad Wasif</p>
+        </div>
+        <ul>
+          <a href="index.html"><li><i class="fa fa-home"></i> Home</li></a>
+          <a href="myAds.html"><li><i class="fa fa-ad"></i> My Ads</li></a>
+          <a href="signup.html"><li><i class="fa fa-user"></i> My Account</li></a>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+    </main>
+
+  </body>
+  <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyAE5mjapAMqXADHLx0pFC4IKLG5KdfdpAQ",
+      authDomain: "olx-website-50792.firebaseapp.com",
+      databaseURL: "https://olx-website-50792.firebaseio.com",
+      projectId: "olx-website-50792",
+      storageBucket: "olx-website-50792.appspot.com",
+      messagingSenderId: "606847682526",
+      appId: "1:606847682526:web:c0b84045de8390cc"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script type="text/javascript" src="nav.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+  <script type="text/javascript" src="https://dl-web.dropbox.com/s/bjt27cz69yh4l3i/notification.js?dl=0"></script>
+  <script src="newAdForm.js" ></script>
+
+</html>

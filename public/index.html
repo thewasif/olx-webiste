@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OLX Pakistan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <link rel="stylesheet"  href="style.css" >
+    <link rel="icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Montserrat|Dosis" rel="stylesheet">
+  </head>
+  <body>
+    <div class="modal">
+      <div class="img">
+        <img id="m-img" src="https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+      </div>
+
+      <div class="modal-body">
+        <h1 id="m-title">Ad Title</h1>
+        <p id="m-price">Rs. 1200</p>
+        <p id="m-location"><i class="fa fa-map-marker-alt"></i> Location</p>
+        <p id="m-number"><i class="fa fa-phone"></i> 0321-2044538</p>
+        <p id="m-desc">jfa;fkdfjfj jfkfj f fj fj fkfjfjjf kfkl jfks fj jjkjfjjfjkfjfksjf jf jfkldklfjjfjf jsd f</p>
+        <button class='btn' onclick="modal('hide')">Okay</button>
+      </div>
+
+    </div>
+    <header>
+      <!-- AppBar -->
+      <div class="app-header">
+        <div class="inner">
+          <i class="fa fa-bars" onclick="nav('open')"></i>
+          <h3><a href="index.html">OLX Pakistan</a></h3>
+        </div>
+        <a href="newad.html" title="Create new ad"><i class='fa fa-plus'></i></a>
+      </div>
+
+      <!-- Side Navigation -->
+      <nav id='nav'>
+        <i class="fa fa-arrow-left" onclick="nav('close')"></i>
+        <div class="account-info">
+          <h3>OLX Pakistan</h3>
+          <p>Created by: Muhammad Wasif</p>
+        </div>
+        <ul>
+          <a href="index.html"><li><i class="fa fa-home"></i> Home</li></a>
+          <a href="myAds.html"><li><i class="fa fa-ad"></i> My Ads</li></a>
+          <a href="signup.html"><li><i class="fa fa-user"></i> My Account</li></a>
+        </ul>
+      </nav>
+    </header>
+
+
+    <main>
+      <!-- Search Bar -->
+      <center>
+        <div class="search-container">
+          <i class="fa fa-search"></i>
+          <select id="category-select" onchange="load_ads()">
+            <option value="all">All</option>
+            <option value="automobiles">Automobiles</option>
+            <option value="gadgets" onclick="an()">Gadgets</option>
+            <option value="property">House / Property</option>
+            <option value="tools">Tools</option>
+          </select>
+        </div>
+      </center>
+
+      <h2 style="text-align: left; font-family: 'Raleway'; margin-left: 10px;">Fresh recommendations</h2>
+
+      <!-- Product Cards -->
+      <div class="cards-container">
+
+
+      </div>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyAE5mjapAMqXADHLx0pFC4IKLG5KdfdpAQ",
+        authDomain: "olx-website-50792.firebaseapp.com",
+        databaseURL: "https://olx-website-50792.firebaseio.com",
+        projectId: "olx-website-50792",
+        storageBucket: "olx-website-50792.appspot.com",
+        messagingSenderId: "606847682526",
+        appId: "1:606847682526:web:c0b84045de8390cc"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script type="text/javascript" src="nav.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

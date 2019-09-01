@@ -1,0 +1,330 @@
+$primary-color: #4285F4;
+$shadow: rgba(0, 0, 0, 0.3);
+%flex-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+%input-style{
+  padding: 4px 2px;
+  outline: none;
+  border: none;
+  border-bottom: solid 1px #333;
+  font-family: "Montserrat";
+  font-size: large;
+}
+
+body{
+  margin: 0;
+  .modal{
+    visibility: hidden;
+    position: fixed;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    background: white;
+    padding: 10px;
+    top: 20%;
+    width: 80%;
+    left: 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    .img{
+      img{
+        width: 100%;
+      }
+    }
+    .modal-body{
+      font-family: "Raleway";
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      padding: 10px;
+      text-transform: capitalize;
+      p{
+        margin-top: -8px;
+      }
+      .btn{
+        width: 80%;
+        background: $primary-color;
+        color: white;
+        border: none;
+        outline: none;
+        box-shadow: 1px 1px 0px $shadow;
+        font-family: "Montserrat";
+        font-size: small;
+        padding: 10px;
+        margin: 2px;
+      }
+    }
+  }
+}
+a{
+  color: inherit;
+  text-decoration: inherit;
+}
+table{
+  font-family: "Raleway";
+}
+.toastr{
+  font-family: "Raleway";
+  font-size: large;
+}
+header{
+  .app-header{
+    background: $primary-color;
+    color: white;
+    padding: 0px 15px;
+    display: flex;
+    .inner{
+      @extend %flex-center;
+      flex-direction: row;
+      justify-content: flex-start;
+      font-family: "Raleway";
+      letter-spacing: 1px;
+      .fa-bars{
+        font-size: x-large;
+        margin-right: 0.7em;
+      }
+    }
+    a{
+      margin-left: auto;
+      align-self: center;
+      font-size: large;
+    }
+  }
+
+
+  nav{
+    position: fixed;
+    top: 0; left: -250px;
+    box-shadow: 5px 0px 10px $shadow;
+    width: 200px;
+    background: white;
+    height: 100%;
+    transition: 0.3s ease-in-out;
+    padding: 40px 30px 10px 10px;
+    .fa-arrow-left{
+      position: relative;
+      bottom: 25px; left: 180px;
+    }
+    .account-info{
+      position: relative;
+      left: 10px;
+      top: -20px;
+      h3{
+        font-family: "Raleway";
+      }
+      p{
+        margin-top: -15px;
+        font-size: small;
+        font-family: "Dosis";
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+    ul{
+      list-style-type: none;
+      position: relative;
+      left: -25px;
+      li{
+        color: #333;
+        display: block;
+        padding: 6px;
+        font-family: "Raleway";
+        &:hover{
+          color: $primary-color;
+          background: rgba(66,133,244, 0.3);
+          border-radius: 3px;
+
+        }
+        .fa{
+          margin-right: 15px;
+          font-size: large;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+main{
+  .search-container{
+    box-shadow: 0 0 8px $shadow;
+    padding: 10px;
+    width: 80%;
+    margin: 10px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    @extend %flex-center;
+    #category-select{
+      width: 80%;
+      @extend %input-style;
+    }
+
+    .fa-search{
+      margin-right: 20px;
+      font-size: large;
+    }
+  }
+
+
+
+  .cards-container{
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 15px;
+    margin: 10px;
+    .card{
+      box-shadow: 1px 1px 2px $shadow;
+      padding: 10px;
+      height: fit-content;
+      .card-img{
+        width: 100%;
+        height: 250px;
+      }
+      .card-body{
+        display: flex;
+        flex-direction: column;
+        %p-styles{
+          color: rgab(0, 0, 0, 0.5);
+          font-family: "Raleway";
+          font-size: medium;
+        }
+        h2{
+          font-family: "Raleway";
+          color: #333;
+          text-transform: capitalize;
+          font-size: large;
+        }
+        .price{
+          @extend %p-styles;
+          margin-top: -12px;
+        }
+        .location{
+          @extend %p-styles;
+          font-size: small;
+          text-transform: capitalize;
+          margin-top: -10px;
+          .fa-map-marker-alt{
+            color: #ff4444;
+            margin-right: 5px;
+          }
+        }
+        .desc{
+          @extend %p-styles;
+          margin-top: 0px;
+        }
+
+      }
+      .btn-group{
+        display: flex;
+        .btn{
+          width: 80%;
+          background: $primary-color;
+          color: white;
+          border: none;
+          outline: none;
+          box-shadow: 1px 1px 0px $shadow;
+          font-family: "Montserrat";
+          font-size: small;
+          margin: 2px;
+        }
+      }
+    }
+  }
+
+
+
+
+  .card-signup{
+    width: 80%;
+    box-shadow: 0 0 10px $shadow;
+    margin-top: 40px;
+    .btn-group{
+      display: flex;
+      .btn{
+        width: 100%;
+        padding: 10px;
+        background: #efefef;
+        border: none;
+        outline: none;
+
+        font-family: "Montserrat";
+      }
+    }
+    .form-body{
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      h1{
+        font-family: "Montserrat";
+      }
+      input{
+        @extend %input-style;
+        margin: 10px;
+        &:focus{
+          border-bottom: solid  1px $primary-color;
+          transition: 0.5s;
+        }
+      }
+      .btn-group{
+        .btn{
+          margin: 10px;
+          background: $primary-color;
+          color: white;
+          outline: none;
+        }
+      }
+    }
+  }
+
+
+  .form{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    input{
+      @extend %input-style;
+      margin: 10px;
+      width: 70%;
+      &:focus{
+        border-bottom: solid 1px $primary-color;
+        transition: 0.3s;
+      }
+    }
+    select{
+      @extend %input-style;
+      margin: 10px;
+      width: 70%;
+      outline: none;
+    }
+    textarea{
+      @extend %input-style;
+      margin: 10px;
+      width: 70%;
+      &:focus{
+        border-bottom: solid 1px $primary-color;
+        transition: 0.3s;
+      }
+    }
+    .btn{
+      width: 100%;
+      padding: 10px;
+      background: $primary-color;
+      border: none;
+      color: white;
+      width: 70%;
+      outline: none;
+      font-family: "Montserrat";
+      i{
+        font-size: large;
+        margin-right: 10px;
+      }
+    }
+  }
+
+
+
+
+}

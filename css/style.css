@@ -1,0 +1,74 @@
+header .app-header .inner, main .search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+body {
+  margin: 0;
+  background: red; }
+
+header .app-header {
+  background: #4285F4;
+  color: white;
+  padding: 0px 15px; }
+  header .app-header .inner {
+    flex-direction: row;
+    justify-content: flex-start;
+    font-family: "Raleway";
+    letter-spacing: 1px; }
+    header .app-header .inner .fa-bars {
+      font-size: x-large;
+      margin-right: 0.7em; }
+
+main .search-container {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  width: 80%;
+  margin: 10px;
+  border-radius: 5px; }
+  main .search-container input {
+    width: 80%;
+    padding: 4px 2px;
+    outline: none;
+    border: none;
+    border-bottom: solid 1px #333;
+    font-family: "Dosis";
+    font-size: large; }
+  main .search-container .fa-search {
+    margin-right: 20px;
+    font-size: large; }
+
+main .cards-container {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 15px;
+  margin: 10px; }
+  main .cards-container .card {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    height: 100%; }
+    main .cards-container .card .card-img {
+      width: 100%;
+      height: auto; }
+    main .cards-container .card .card-body {
+      display: flex;
+      flex-direction: column; }
+      main .cards-container .card .card-body .price, main .cards-container .card .card-body .location, main .cards-container .card .card-body .desc {
+        color: rgab(0, 0, 0, 0.5);
+        font-family: "Raleway";
+        font-size: medium; }
+      main .cards-container .card .card-body h2 {
+        font-family: "Raleway";
+        color: #333;
+        font-size: large; }
+      main .cards-container .card .card-body .price {
+        margin-top: -12px; }
+      main .cards-container .card .card-body .location {
+        font-size: small;
+        margin-top: -10px; }
+        main .cards-container .card .card-body .location .fa-map-marker-alt {
+          color: #ff4444;
+          margin-right: 5px; }
+      main .cards-container .card .card-body .desc {
+        margin-top: 0px; }
